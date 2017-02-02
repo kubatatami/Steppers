@@ -24,19 +24,17 @@ import android.widget.TextView;
 import com.github.kubatatami.steppers.R;
 
 
-public class SteppersViewHolder extends RecyclerView.ViewHolder {
+class SteppersViewHolder extends RecyclerView.ViewHolder {
 
     private boolean isChecked;
 
-    protected View itemView;
     protected RoundedView roundedView;
     protected TextView textViewLabel;
     protected TextView textViewSubLabel;
     protected FrameLayout frameLayout;
 
-    public SteppersViewHolder(View itemView) {
+    SteppersViewHolder(View itemView) {
         super(itemView);
-        this.itemView = itemView;
         this.roundedView = (RoundedView) itemView.findViewById(R.id.roundedView);
         this.textViewLabel = (TextView) itemView.findViewById(R.id.textViewLabel);
         this.textViewSubLabel = (TextView) itemView.findViewById(R.id.textViewSubLabel);
@@ -47,11 +45,11 @@ public class SteppersViewHolder extends RecyclerView.ViewHolder {
     /**
      * @return true if step is done, false if not
      */
-    public boolean isChecked() {
+    boolean isChecked() {
         return isChecked;
     }
 
-    public void setChecked(boolean checked) {
+    void setChecked(boolean checked) {
         isChecked = checked;
     }
 }

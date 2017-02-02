@@ -17,4 +17,25 @@
 
     <include layout="@layout/content_main" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/hide_step"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="HIDE 3 STEP"/>
+
+        <Button
+            android:id="@+id/show_step"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SHOW 3 STEP"/>
+
+    </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>

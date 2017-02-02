@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.Toast;
 
 import com.github.kubatatami.StepperAdapter;
@@ -50,6 +51,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onStepChanged(int step) {
                 Toast.makeText(MainActivity.this, "Step changed", Toast.LENGTH_SHORT).show();
+            }
+        });
+        View showStep = findViewById(R.id.show_step);
+        showStep.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                steppersView.showStep(2);
+            }
+        });
+        View hideStep = findViewById(R.id.hide_step);
+        hideStep.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                steppersView.hideStep(2);
             }
         });
     }

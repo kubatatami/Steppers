@@ -35,24 +35,39 @@ import android.widget.FrameLayout;
 import com.github.kubatatami.steppers.R;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class SteppersView extends FrameLayout {
 
     private InternalSteppersAdapter internalSteppersAdapter;
+
     private FragmentManager fragmentManager;
+
     private List<OnStepChangedListener> onStepChangedListeners = new ArrayList<>();
+
     private int circleActiveColor;
+
     private int circleInactiveColor;
+
     private int circleDoneColor;
+
     private int labelActiveTextColor;
+
     private int labelInactiveTextColor;
+
     private int labelDoneTextColor;
+
     private int subLabelActiveTextColor;
+
     private int subLabelInactiveTextColor;
+
     private int subLabelDoneTextColor;
+
     private int labelTextSize;
+
     private int subLabelTextSize;
+
     private boolean backByTap;
 
     public SteppersView(Context context) {
@@ -94,7 +109,7 @@ public class SteppersView extends FrameLayout {
     }
 
     public void notifyDataSetChanged() {
-        if(internalSteppersAdapter != null) {
+        if (internalSteppersAdapter != null) {
             internalSteppersAdapter.notifyDataSetChanged();
         }
     }
@@ -149,67 +164,14 @@ public class SteppersView extends FrameLayout {
         return internalSteppersAdapter.getItemCount();
     }
 
-    public void setCircleActiveColor(@ColorInt int circleActiveColor) {
-        this.circleActiveColor = circleActiveColor;
-        notifyDataSetChanged();
-    }
-
-    public void setCircleInactiveColor(@ColorInt int circleInactiveColor) {
-        this.circleInactiveColor = circleInactiveColor;
-        notifyDataSetChanged();
-    }
-
-    public void setCircleDoneColor(@ColorInt int circleDoneColor) {
-        this.circleDoneColor = circleDoneColor;
-        notifyDataSetChanged();
-    }
-
-    public void setLabelActiveTextColor(@ColorInt int labelActiveTextColor) {
-        this.labelActiveTextColor = labelActiveTextColor;
-        notifyDataSetChanged();
-    }
-
-    public void setLabelInactiveTextColor(@ColorInt int labelInactiveTextColor) {
-        this.labelInactiveTextColor = labelInactiveTextColor;
-        notifyDataSetChanged();
-    }
-
-    public void setLabelDoneTextColor(@ColorInt int labelDoneTextColor) {
-        this.labelDoneTextColor = labelDoneTextColor;
-        notifyDataSetChanged();
-    }
-
-    public void setSubLabelActiveTextColor(@ColorInt int subLabelActiveTextColor) {
-        this.subLabelActiveTextColor = subLabelActiveTextColor;
-        notifyDataSetChanged();
-    }
-
-    public void setSubLabelInactiveTextColor(@ColorInt int subLabelInactiveTextColor) {
-        this.subLabelInactiveTextColor = subLabelInactiveTextColor;
-        notifyDataSetChanged();
-    }
-
-    public void setSubLabelDoneTextColor(@ColorInt int subLabelDoneTextColor) {
-        this.subLabelDoneTextColor = subLabelDoneTextColor;
-        notifyDataSetChanged();
-    }
-
-    public void setLabelTextSize(int labelTextSize) {
-        this.labelTextSize = labelTextSize;
-    }
-
-    public void setSubLabelTextSize(int subLabelTextSize) {
-        this.subLabelTextSize = subLabelTextSize;
-    }
-
-    public void setBackByTap(boolean backByTap) {
-        this.backByTap = backByTap;
-        notifyDataSetChanged();
-    }
-
     @ColorInt
     public int getCircleActiveColor() {
         return circleActiveColor;
+    }
+
+    public void setCircleActiveColor(@ColorInt int circleActiveColor) {
+        this.circleActiveColor = circleActiveColor;
+        notifyDataSetChanged();
     }
 
     @ColorInt
@@ -217,9 +179,19 @@ public class SteppersView extends FrameLayout {
         return circleInactiveColor;
     }
 
+    public void setCircleInactiveColor(@ColorInt int circleInactiveColor) {
+        this.circleInactiveColor = circleInactiveColor;
+        notifyDataSetChanged();
+    }
+
     @ColorInt
     public int getCircleDoneColor() {
         return circleDoneColor;
+    }
+
+    public void setCircleDoneColor(@ColorInt int circleDoneColor) {
+        this.circleDoneColor = circleDoneColor;
+        notifyDataSetChanged();
     }
 
     @ColorInt
@@ -227,9 +199,19 @@ public class SteppersView extends FrameLayout {
         return labelActiveTextColor;
     }
 
+    public void setLabelActiveTextColor(@ColorInt int labelActiveTextColor) {
+        this.labelActiveTextColor = labelActiveTextColor;
+        notifyDataSetChanged();
+    }
+
     @ColorInt
     public int getLabelInactiveTextColor() {
         return labelInactiveTextColor;
+    }
+
+    public void setLabelInactiveTextColor(@ColorInt int labelInactiveTextColor) {
+        this.labelInactiveTextColor = labelInactiveTextColor;
+        notifyDataSetChanged();
     }
 
     @ColorInt
@@ -237,9 +219,19 @@ public class SteppersView extends FrameLayout {
         return labelDoneTextColor;
     }
 
+    public void setLabelDoneTextColor(@ColorInt int labelDoneTextColor) {
+        this.labelDoneTextColor = labelDoneTextColor;
+        notifyDataSetChanged();
+    }
+
     @ColorInt
     public int getSubLabelActiveTextColor() {
         return subLabelActiveTextColor;
+    }
+
+    public void setSubLabelActiveTextColor(@ColorInt int subLabelActiveTextColor) {
+        this.subLabelActiveTextColor = subLabelActiveTextColor;
+        notifyDataSetChanged();
     }
 
     @ColorInt
@@ -247,27 +239,50 @@ public class SteppersView extends FrameLayout {
         return subLabelInactiveTextColor;
     }
 
+    public void setSubLabelInactiveTextColor(@ColorInt int subLabelInactiveTextColor) {
+        this.subLabelInactiveTextColor = subLabelInactiveTextColor;
+        notifyDataSetChanged();
+    }
+
     @ColorInt
     public int getSubLabelDoneTextColor() {
         return subLabelDoneTextColor;
+    }
+
+    public void setSubLabelDoneTextColor(@ColorInt int subLabelDoneTextColor) {
+        this.subLabelDoneTextColor = subLabelDoneTextColor;
+        notifyDataSetChanged();
     }
 
     public int getLabelTextSize() {
         return labelTextSize;
     }
 
+    public void setLabelTextSize(int labelTextSize) {
+        this.labelTextSize = labelTextSize;
+    }
+
     public int getSubLabelTextSize() {
         return subLabelTextSize;
+    }
+
+    public void setSubLabelTextSize(int subLabelTextSize) {
+        this.subLabelTextSize = subLabelTextSize;
     }
 
     public boolean isBackByTap() {
         return backByTap;
     }
 
+    public void setBackByTap(boolean backByTap) {
+        this.backByTap = backByTap;
+        notifyDataSetChanged();
+    }
+
     @Override
     protected Parcelable onSaveInstanceState() {
         Parcelable superState = super.onSaveInstanceState();
-        return new SavedState(superState, getCurrentStep());
+        return new SavedState(superState, getCurrentStep(), internalSteppersAdapter.visibleSteps);
     }
 
     @Override
@@ -275,6 +290,8 @@ public class SteppersView extends FrameLayout {
         SavedState savedState = (SavedState) state;
         super.onRestoreInstanceState(savedState.getSuperState());
         setStep(savedState.getCurrentStep());
+        internalSteppersAdapter.visibleSteps.clear();
+        internalSteppersAdapter.visibleSteps.addAll(savedState.getVisibleSteps());
     }
 
     private void build() {
@@ -287,7 +304,7 @@ public class SteppersView extends FrameLayout {
         LayoutParams layoutParams = new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         recyclerView.setLayoutParams(layoutParams);
         recyclerView.setClipToPadding(false);
-        recyclerView.setPadding(0,0,0, getResources().getDimensionPixelSize(R.dimen.item_text_margin_top));
+        recyclerView.setPadding(0, 0, 0, getResources().getDimensionPixelSize(R.dimen.item_text_margin_top));
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(internalSteppersAdapter);
@@ -305,34 +322,38 @@ public class SteppersView extends FrameLayout {
     }
 
     private void invokeStepChangedListeners(int step) {
-        for(OnStepChangedListener onStepChangedListener : onStepChangedListeners) {
+        for (OnStepChangedListener onStepChangedListener : onStepChangedListeners) {
             onStepChangedListener.onStepChanged(step);
         }
     }
 
+    public void addOnStepClickListener(OnStepClickListener onStepClickListener) {
+        internalSteppersAdapter.getOnStepClickListeners().add(onStepClickListener);
+    }
+
+    public void removeOnStepClickListener(OnStepClickListener onStepClickListener) {
+        internalSteppersAdapter.getOnStepClickListeners().remove(onStepClickListener);
+    }
+
+    public void hideStep(int step) {
+        internalSteppersAdapter.hideStep(step);
+    }
+
+    public void showStep(int step) {
+        internalSteppersAdapter.showStep(step);
+    }
+
+    public interface OnStepChangedListener {
+
+        void onStepChanged(int step);
+    }
+
+    public interface OnStepClickListener {
+
+        void onStepClick(int step);
+    }
+
     protected static class SavedState extends BaseSavedState {
-
-        int currentStep;
-
-        public SavedState(Parcel source) {
-            super(source);
-            currentStep = source.readInt();
-        }
-
-        public SavedState(Parcelable superState, int currentStep) {
-            super(superState);
-            this.currentStep = currentStep;
-        }
-
-        public int getCurrentStep() {
-            return currentStep;
-        }
-
-        @Override
-        public void writeToParcel(Parcel out, int flags) {
-            super.writeToParcel(out, flags);
-            out.writeInt(currentStep);
-        }
 
         public static final Parcelable.Creator<SavedState> CREATOR = new Creator<SavedState>() {
             public SavedState createFromParcel(Parcel in) {
@@ -343,11 +364,37 @@ public class SteppersView extends FrameLayout {
                 return new SavedState[size];
             }
         };
-    }
 
-    public interface OnStepChangedListener {
+        int currentStep;
 
-        void onStepChanged(int step);
+        LinkedList<Integer> visibleSteps = new LinkedList<>();
+
+        public SavedState(Parcel source) {
+            super(source);
+            currentStep = source.readInt();
+            source.readList(visibleSteps, LinkedList.class.getClassLoader());
+        }
+
+        public SavedState(Parcelable superState, int currentStep, LinkedList<Integer> visibleSteps) {
+            super(superState);
+            this.currentStep = currentStep;
+            this.visibleSteps = visibleSteps;
+        }
+
+        public LinkedList<Integer> getVisibleSteps() {
+            return visibleSteps;
+        }
+
+        public int getCurrentStep() {
+            return currentStep;
+        }
+
+        @Override
+        public void writeToParcel(Parcel out, int flags) {
+            super.writeToParcel(out, flags);
+            out.writeInt(currentStep);
+            out.writeList(visibleSteps);
+        }
     }
 
 }
