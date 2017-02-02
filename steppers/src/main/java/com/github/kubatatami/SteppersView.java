@@ -367,12 +367,12 @@ public class SteppersView extends FrameLayout {
 
         int currentStep;
 
-        LinkedList<Integer> visibleSteps;
+        LinkedList<Integer> visibleSteps = new LinkedList<>();
 
         public SavedState(Parcel source) {
             super(source);
             currentStep = source.readInt();
-            visibleSteps = (LinkedList<Integer>) source.readValue(LinkedList.class.getClassLoader());
+            source.readList(visibleSteps, LinkedList.class.getClassLoader());
         }
 
         public SavedState(Parcelable superState, int currentStep, LinkedList<Integer> visibleSteps) {
